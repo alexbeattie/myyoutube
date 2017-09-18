@@ -24,8 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let layout = UICollectionViewFlowLayout()
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
-
+        // remove shadow under nav bar so menubar & nav bar are see
         UINavigationBar.appearance().barTintColor = UIColor.rgb(red:  61, green: 194, blue: 209, alpha: 1)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
         application.statusBarStyle = .lightContent
         let statusBarBackgroundView = UIView()
         statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 29, green: 125, blue: 128, alpha: 1)
